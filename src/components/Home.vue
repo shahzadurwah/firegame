@@ -1,6 +1,7 @@
 <template>
-  <div class="row justify-content-center p-5" style="background-color: white; 
-  margin-top: 5rem; margin-left: 1rem; margin-right:1rem;border-radius: 40px; 
+  <div class="container-fluid">
+    <div class="row justify-content-center pt-2 pb-2" style="background-color: white; 
+  margin-top: 5rem; border-radius: 40px; 
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
     <div class="col-sm-12 col-md-8 ">
         <h2 class="text-center">Shahzad</h2>
@@ -33,12 +34,12 @@
         <button class="btn btn1" @click="gameisRunning">Start New Game</button>
       </div>
     </div>
-    <div class="col-sm-12 col-md-10 mt-3" v-else>
+    <div class=" col-md-12 mt-3 pb-4" v-else>
       <div class="startbtn text-center text-white">
-        <button class="btn btn2" @click="attack">Attack</button>
-        <button class="btn btn3" @click="Specialattack">Special Attack</button>
-        <button class="btn btn4" @click="heal">Heal</button>
-        <button class="btn btn5" @click="newStart">Give Up</button>
+        <button class="btn btn2 m-2" @click="attack">Attack</button>
+        <button class="btn btn3 m-2" @click="Specialattack">Special Attack</button>
+        <button class="btn btn4 m-2" @click="heal">Heal</button>
+        <button class="btn btn5 m-2" @click="newStart">Give Up</button>
       </div>
     </div>
     <div class="col-sm-12 col-md-10 mt-3" v-if="data.length > 0">
@@ -55,6 +56,8 @@
       </div>
     </div>
   </div>
+  </div>
+
 </template>
 
 <script>
@@ -197,7 +200,7 @@ h2{
   font-weight: bold;
   border: none;
   outline: none;
-  height: 50px;
+  max-height: 50px;
   transition: background-color 0.3s ease-in-out;
 }
 .btn2:hover {
@@ -210,7 +213,7 @@ h2{
   font-weight: bold;
   border: none;
   outline: none;
-  height: 50px;
+  max-height: 50px;
   transition: background-color 0.3s ease-in-out;
 }
 .btn3:hover {
@@ -223,7 +226,7 @@ h2{
   font-weight: bold;
   border: none;
   outline: none;
-  height: 50px;
+  /* max-height: 50px; */
   transition: background-color 0.3s ease-in-out;
 }
 .btn4:hover {
